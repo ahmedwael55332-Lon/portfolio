@@ -1,0 +1,28 @@
+<h1>{{ item.name }}</h1>
+
+<p>{{ item.price }}</p>
+
+<button (click)="onAddToCart()">
+  Add To Cart
+</button>
+
+<button (click)="onUpdate()">
+  Update
+</button>
+
+<button (click)="onDelete()">
+  Delete
+</button>
+
+
+<div *ngIf="isEditing">
+
+    <input [(ngModel)]="item.name" placeholder="Product Name">
+
+    <input type="number" [(ngModel)]="item.price" placeholder="Price">
+
+    <button (click)="onSave()">
+    Save
+  </button>
+
+</div>

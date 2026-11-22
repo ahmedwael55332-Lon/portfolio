@@ -1,0 +1,62 @@
+<!-- interpolation -->
+
+
+<h1>hello {{username}} </h1>
+
+
+<!-- property attribute -->
+
+<img [src]="imgUrl">
+<button [disabled]="isDisabled">click on</button>
+
+
+<!-- event binding -->
+
+<button style="border: 1px solid red; width:100px;" (click)="icrease()">click me</button>
+
+<h2>the button is clicked {{count}} times </h2>
+
+<!-- two way data binding -->
+
+<input type="text" [(ngModel)]="name">
+<p>hello {{name}} </p>
+
+
+<!-- directives -->
+
+<!-- 1- component  -->
+
+
+<!-- 2- structural if for switch -->
+
+<ul>
+    <li *ngFor="let s of students">
+        {{s.name}}--{{s.age}}
+
+    </li>
+
+</ul>
+
+<button *ngIf="islogged">log in</button>
+
+<button (click)="role='admin'">log as admin</button>
+<button (click)="role='donor'">log as donor</button>
+<button (click)="role='requester'">log as requester</button>
+<h2>dashboard example</h2>
+
+<div [ngSwitch]="role">
+    <h1 *ngSwitchCase="'admin'">heloo admin</h1>
+    <h1 *ngSwitchDeafult="'donor'">hello donor</h1>
+    <h1 *ngSwitchCase="'requester'">hello requester</h1>
+</div>
+
+<p appHighlight>hello test</p>
+
+
+<h1 [ngStyle]="{
+    'color': isActive ? 'blue' : 'red',
+    'width': '300px'
+  }">Hello ahmedddd</h1>
+<h2 [ngClass]="isActive ? 'active' : 'inactive'">
+    Hello ahmed
+</h2>

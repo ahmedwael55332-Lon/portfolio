@@ -1,0 +1,13 @@
+.active {
+  color: red;
+  background-color: lightblue;
+  width: 300px;
+  padding: 20px;
+}
+
+.inactive {
+  color: blueviolet;
+  background-color: lightcoral;
+  width: 200px;
+  padding: 10px;
+}

@@ -1,0 +1,13 @@
+<p>products works!</p>
+
+<ol>
+    <li *ngFor="let p of products; let i = index">
+        <app-product [item]="p" (addToCart)="onProductAdded($event)" (updateProduct)="onProductUpdated($event, i)" (deleteProduct)="onProductDeleted(i)"></app-product>
+    </li>
+</ol>
+
+<ul>
+    <li *ngFor="let c of cart">{{ c.name }} -- {{ c.price }}</li>
+</ul>
+
+<h2>total: {{ total }}</h2>
